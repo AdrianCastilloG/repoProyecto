@@ -1,0 +1,174 @@
+*{
+    margin: 10px;
+    padding: 1px;
+    font-family: 'Ubuntu', sans-serif, Verdana;
+    background-color: #031634;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Website Title */
+.webTitle{
+    text-decoration: none;
+    color: #09292d;
+}
+.webTitleAnchor{
+    text-decoration: none;
+    color: #CDB380;
+}
+/* Header */
+.header{
+    color: #09292d;
+}
+.headerNav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: #0f4448;
+}
+.headerNavAnchor{
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+    background-color: #9bb2f8;
+    color: #140f07;
+}
+/* Body CSS Index */
+.languageList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.languageList li{
+    display: inline;
+}
+.languageList li a{
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin-right: 5px;
+    color: #E8DDCB;
+}
+.langWeb a{
+    color: #036564;
+}
+.cWeb a{
+    color: #036564;
+}
+p{
+    color: #E8DDCB;
+}
+h2 {
+    color: #CDB380;
+}
+/* Footer CSS */
+.footer{
+    position: fixed;
+    margin-top: auto;
+    bottom:0;
+    height:100px;  
+}
+/* contactForm CSS */
+.contactForm {
+    display: flexs;
+    color: #CDB380;
+}
+input{
+    color: #E8DDCB;
+}
+select{
+    color: #E8DDCB; 
+}
+/* Grid Index */
+.gridContainer{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 5px;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+}
+.indexGrid-1{
+    grid-area: header;
+}
+.indexGrid-2{
+    grid-area: main;
+}
+.indexGrid-3{
+    grid-area: footer;
+}
+
+/* Header grid */
+.headerGrid{
+    display: grid;
+    grid-template-columns: 20%, 80%;
+    grid-template-rows: 25px;
+    grid-gap: 5px;
+    grid-template-areas:
+    "title nav"
+}
+.headerGrid-1{
+    grid-area: title;
+}
+.headerGrid-2{
+    grid-area: nav;
+}
+@media screen and (max-width: 768px) {
+    .headerGrid{
+        display: grid;
+        grid-template-rows: 25px;
+        grid-gap: 15px;
+        grid-template-areas:
+        "title"
+        "nav"
+    }
+    .headerGrid-1{
+        grid-area: title;
+    }
+    .headerGrid-2{
+        grid-area: nav;
+    }
+}
+    /* List grid */
+
+    .listGrid{
+        display: grid;
+        grid-template-rows: 300px;
+        grid-template-areas:
+        "langC cpp python"
+    }
+    .listGrid-1{
+        grid-area: langC;
+    }
+    .listGrid-2{
+        grid-area: cpp;
+    }
+    .listGrid-3{
+        grid-area: python;
+    }
+
+    @media screen and (max-width: 480px) {
+        .listGrid{
+            display: grid;
+            grid-template-rows: 300px;
+            grid-template-areas:
+            "langC"
+            "cpp" 
+            "python"
+        }
+        .listGrid-1{
+            grid-area: langC;
+        }
+        .listGrid-2{
+            grid-area: cpp;
+        }
+        .listGrid-3{
+            grid-area: python;
+        }
+    }
